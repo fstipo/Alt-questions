@@ -10,7 +10,9 @@ const App = () => {
   // state value at the app
 
   const toggleQuestion = (id) => {
-    setActiveId(id);
+    // for close same paragraph
+    const newId = id === activeId ? null : id;
+    setActiveId(newId);
   };
 
   return (
